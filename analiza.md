@@ -28,7 +28,7 @@ System ma **usprawnić zarządzanie danymi**, **ułatwić tworzenie raportów** 
 
 ## Kto będzie obsługiwał system i jakie stanowiska pracy system wspomoże
 
-### Użytkownicy systemu (stanowiska pracy)
+### Użytkownicy systemu
 
 - **Doradca klienta** – wprowadza dane nowych uczestników, zapisuje ich na wycieczki, odnotowuje wpłaty i generuje potwierdzenia rezerwacji.  
 - **Pracownik ds. rezerwacji** – zarządza ofertami wycieczek (dodaje, modyfikuje, anuluje), aktualizuje statusy płatności i przypisuje pilotów.  
