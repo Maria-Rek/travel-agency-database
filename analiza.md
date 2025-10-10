@@ -35,3 +35,4 @@ System ma **usprawnić zarządzanie danymi**, **ułatwić tworzenie raportów** 
 - **Pilot wycieczki** – ma dostęp do listy uczestników i szczegółów przydzielonych wycieczek.  
 - **Kierownik działu turystyki** – analizuje dane, przygotowuje raporty dotyczące sprzedaży, liczby uczestników i aktywności pilotów.  
 - **Prezes biura (klient projektu)** – korzysta z zestawień i raportów zarządczych umożliwiających podejmowanie decyzji strategicznych.
+klient!!!!
