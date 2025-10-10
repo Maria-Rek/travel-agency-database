@@ -36,3 +36,4 @@ System ma **usprawnić zarządzanie danymi**, **ułatwić tworzenie raportów** 
 - **Kierownik działu turystyki** – analizuje dane, przygotowuje raporty dotyczące sprzedaży, liczby uczestników i aktywności pilotów.  
 - **Prezes biura (klient projektu)** – korzysta z zestawień i raportów zarządczych umożliwiających podejmowanie decyzji strategicznych.
 klient!!!!
+ksiegowosc?
