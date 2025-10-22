@@ -1,26 +1,21 @@
 # Analiza wymagań i kontekstu biznesowego – Biuro podróży
 
 ## Kto jest klientem (kto kupuje program/projekt)
-
-Klientem systemu jest **prezes biura podróży**, które zajmuje się organizowaniem wycieczek krajowych i zagranicznych.  
-Firma zatrudnia kilku pracowników odpowiedzialnych za obsługę klientów, przygotowywanie ofert oraz prowadzenie grup turystycznych.  
-
-Prezes potrzebuje systemu informatycznego, który **zautomatyzuje i uporządkuje procesy** związane z zarządzaniem ofertami, rezerwacjami, płatnościami oraz przydziałem pilotów do wycieczek.
+Klientem systemu jest **prezes biura podróży** organizującego krajowe i zagraniczne wycieczki. Potrzebuje narzędzia do sprawnego zarządzania **ofertą, terminami, rezerwacjami, płatnościami** oraz **przydziałem pilotów**, a także korzystać z **przejrzystych raportów i zestawień**.
 
 ---
 
 ## Jaki jest cel bazy oraz jakie problemy klient chce rozwiązać
 
 ### Cel systemu
-Celem systemu jest stworzenie **spójnej, bezpiecznej i trwałej bazy danych**, wspomagającej codzienne funkcjonowanie biura podróży – od tworzenia ofert po obsługę uczestników i generowanie raportów sprzedażowych.
+Celem systemu jest zapewnienie **spójnego i bezpiecznego zarządzania informacjami** o wycieczkach (produktach), terminach, uczestnikach, rezerwacjach, płatnościach i przydziałach pilotów oraz umożliwienie generowania **raportów sprzedażowych i operacyjnych**.
 
 ### Problemy, które ma rozwiązać system
-
-- **Brak centralnej ewidencji wycieczek** – informacje o terminach, cenach i kierunkach były rozproszone (np. w arkuszach kalkulacyjnych lub dokumentach papierowych).  
-- **Utrudniona kontrola rezerwacji i płatności** – brak jednolitego sposobu na monitorowanie, które rezerwacje zostały opłacone, a które oczekują na wpłatę.  
-- **Ręczny przydział pilotów** – powodował błędy i nakładanie się terminów, szczególnie przy dużej liczbie organizowanych wycieczek.  
-- **Niespójny przepływ informacji między działami** – doradcy klienta, piloci i kierownicy korzystali z różnych źródeł danych, co prowadziło do pomyłek.  
-- **Brak możliwości raportowania** – kierownictwo nie miało dostępu do aktualnych zestawień dotyczących sprzedaży, liczby uczestników i popularności kierunków.  
+- **Brak jednolitego źródła prawdy** o ofertach, terminach i cenach (dotąd rozproszone arkusze/papier).
+- **Utrudniona kontrola rezerwacji i płatności** (nieczytelne statusy, trudne ustalanie sald i zaległości).
+- **Ręczny przydział pilotów i konflikty terminów** (ryzyko podwójnych przydziałów).
+- **Niespójny przepływ informacji** między sprzedażą, operacją i kierownictwem.
+- **Ograniczone raportowanie** (popularność kierunków, obłożenie terminów, wpływy).
 
 System ma **usprawnić zarządzanie danymi**, **ułatwić tworzenie raportów** oraz **zapewnić lepszą kontrolę nad procesami rezerwacyjnymi**.
 
@@ -29,11 +24,9 @@ System ma **usprawnić zarządzanie danymi**, **ułatwić tworzenie raportów** 
 ## Kto będzie obsługiwał system i jakie stanowiska pracy system wspomoże
 
 ### Użytkownicy systemu
-
-- **Doradca klienta** – wprowadza dane nowych uczestników, zapisuje ich na wycieczki, odnotowuje wpłaty i generuje potwierdzenia rezerwacji.  
-- **Pracownik ds. rezerwacji** – zarządza ofertami wycieczek (dodaje, modyfikuje, anuluje), aktualizuje statusy płatności i przypisuje pilotów.  
-- **Pilot wycieczki** – ma dostęp do listy uczestników i szczegółów przydzielonych wycieczek.  
-- **Kierownik działu turystyki** – analizuje dane, przygotowuje raporty dotyczące sprzedaży, liczby uczestników i aktywności pilotów.  
-- **Prezes biura (klient projektu)** – korzysta z zestawień i raportów zarządczych umożliwiających podejmowanie decyzji strategicznych.
-klient!!!!
-ksiegowosc?
+- **Doradcy klienta / Sprzedawcy** – zakładają i modyfikują rezerwacje, wprowadzają uczestników, rejestrują wpłaty, generują potwierdzenia.
+- **Pracownicy ds. oferty i terminów** – tworzą/modyfikują wycieczki i terminy (ceny, transport, zakwaterowanie), przypisują pilotów.
+- **Księgowość** – uzgadnia płatności, przygotowuje raporty finansowe (wpłaty, salda, zaległości).
+- **Pilot wycieczki** – ma odczyt przydzielonych terminów i list uczestników (dane operacyjne i kontaktowe).
+- **Kierownik działu turystyki** – korzysta z raportów (sprzedaż, obłożenie terminów, obciążenie pilotów, popularność kierunków) i nadzoruje ofertę.
+- **Prezes (klient projektu)** – odczyt raportów zarządczych/sprzedażowych do decyzji strategicznych.
