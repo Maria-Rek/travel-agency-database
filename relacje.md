@@ -30,5 +30,5 @@
    - Uzasadnienie: zaliczka + dopłaty → wiele płatności; każda płatność dotyczy jednej rezerwacji.
 
 8) **Rezerwacje — Płatnosci** *(pokrywa)*  
-   - Rezerwacja: 1, Płatność: 1  
+   - Rezerwacja **(1)** — Płatność **(1)** 
    - Uzasadnienie: w przyjętym modelu jedna rezerwacja wiąże się ściśle z jedną „teczką” płatności (rekordem transakcji). Relacja jest 1:1, aby zapewnić jednoznaczność rozliczeń.
