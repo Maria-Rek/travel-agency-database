@@ -29,6 +29,6 @@
    - Rezerwacja **(0..N)** — Platnosc **(1)**
    - Uzasadnienie: zaliczka + dopłaty → wiele płatności; każda płatność dotyczy jednej rezerwacji.
 
-8) **Rezerwacja — Ubezpieczenie**  *(ma_polisę)*
-   - Rezerwacja **(0..1)** — Ubezpieczenie **(1)**
-   - Uzasadnienie: polisa jest opcjonalna i przypisana do jednej rezerwacji.
+8) **Rezerwacje — Płatnosci** *(pokrywa)*  
+   - Rezerwacja: 1, Płatność: 1  
+   - Uzasadnienie: w przyjętym modelu jedna rezerwacja wiąże się ściśle z jedną „teczką” płatności (rekordem transakcji). Relacja jest 1:1, aby zapewnić jednoznaczność rozliczeń.
