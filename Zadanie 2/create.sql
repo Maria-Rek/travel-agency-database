@@ -6,7 +6,7 @@ CREATE TABLE Destynacje (
     Kraj VARCHAR(50) NOT NULL,
     Region VARCHAR(100),
     Miasto VARCHAR(50) NOT NULL,
-    CONSTRAINT UQ_Destynacje UNIQUE (Kraj, Region, Miasto) -- zapobieganie duplikatom
+    CONSTRAINT UQ_Destynacje UNIQUE (Kraj, Region, Miasto)
 );
 
 CREATE TABLE Hotele (
