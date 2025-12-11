@@ -1,6 +1,7 @@
--- CREATE DATABASE biuro_podrozy;
--- USE biuro_podrozy;
-
+--CREATE DATABASE biuro_podrozy;
+--GO
+--USE biuro_podrozy;
+--GO
 
 -- ==== S£OWNIKI I TABELE NIEZALE¯NE ===
 

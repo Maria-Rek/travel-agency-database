@@ -1,3 +1,6 @@
+USE biuro_podrozy;
+GO
+
 INSERT INTO Destynacje (Kraj, Region, Miasto) VALUES 
 ('Hiszpania', 'Andaluzja', 'Sewilla'),
 ('Hiszpania', 'Katalonia', 'Barcelona'),
