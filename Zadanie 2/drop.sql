@@ -1,0 +1,19 @@
+DROP TABLE IF EXISTS Rezerwacje_Transporty;
+DROP TABLE IF EXISTS Rezerwacje_Uczestnicy;
+DROP TABLE IF EXISTS Platnosci;
+
+DROP TABLE IF EXISTS Rezerwacje;
+DROP TABLE IF EXISTS Uczestnicy;
+DROP TABLE IF EXISTS Klienci;
+DROP TABLE IF EXISTS Terminy;
+
+DROP TABLE IF EXISTS Zakwaterowanie;
+DROP TABLE IF EXISTS Wycieczki;
+
+DROP TABLE IF EXISTS Dane_Osobowe;
+DROP TABLE IF EXISTS Transporty;
+DROP TABLE IF EXISTS Piloci;
+DROP TABLE IF EXISTS Hotele;
+DROP TABLE IF EXISTS Destynacje;
+
+PRINT 'Tabele usuniête';
