@@ -5,27 +5,30 @@ GO
 INSERT INTO Destynacje (Kraj, Region, Miasto) VALUES 
 ('Polska', 'Małopolska', 'Kraków'),
 ('Włochy', 'Lacjum', 'Rzym'),
-('Francja', NULL, 'Paryz'),
+('Francja', NULL, 'Paryż'),
 ('USA', 'Nevada', 'Las Vegas'),
 ('USA', 'New York', 'New York'),
 ('ZEA', NULL, 'Dubaj'),
 ('Malediwy', NULL, 'Male'),
 ('Wielka Brytania', 'Anglia', 'London'),
 ('Egipt', 'Synaj', 'Sharm El Sheikh'),
-('Monako', NULL, 'Monako');
+('Monako', NULL, 'Monako'),
+('Hiszpania', 'Katalonia', 'Barcelona'),
+('Japonia', 'Tokio', 'Tokio');
 
 
 INSERT INTO Hotele (Nazwa, Standard, Adres, Certyfikat_wspolpracy) VALUES 
-('Hotel Copernicus', 5, 'Kanonicza 16, Krakow', 'aktywny'),
+('Hotel Copernicus', 5, 'Kanonicza 16, Kraków', 'aktywny'),
 ('Hotel Hassler', 5, 'Piazza Trinita 6, Rzym', 'aktywny'),
-('Ritz Paris', 5, 'Place Vendome 15, Paryz', 'aktywny'),
+('Ritz Paris', 5, 'Place Vendome 15, Paryż', 'aktywny'),
 ('Bellagio', 5, 'Las Vegas Blvd, Las Vegas', 'aktywny'),
 ('The Plaza', 5, '5th Avenue, New York', 'aktywny'),
 ('Burj Al Arab', 5, 'Jumeirah St, Dubaj', 'aktywny'), 
 ('One&Only Reethi Rah', 5, 'North Atoll, Male', 'aktywny'),
 ('The Savoy', 5, 'Strand, London', 'wygasł'),
 ('Four Seasons Resort', 5, 'Four Seasons Blvd, Sharm', 'aktywny'),
-('Hotel de Paris', 5, 'Place du Casino, Monako', 'aktywny');
+('Hotel de Paris', 5, 'Place du Casino, Monako', 'aktywny'),
+('W Barcelona', 5, 'Placa de la Rosa, Barcelona', 'aktywny');
 
 
 INSERT INTO Piloci (Imie, Nazwisko, Email, Telefon, Data_zatrudnienia, Status_pilota) VALUES 
@@ -90,7 +93,8 @@ INSERT INTO Dane_Osobowe (Imie, Nazwisko, Email, Nr_telefonu, Data_urodzenia) VA
 ('Saint', 'West', NULL, NULL, '2015-12-05'),
 ('Stormi', 'Webster', NULL, NULL, '2018-02-01'),
 ('Blue', 'Ivy', NULL, NULL, '2012-01-07'),
-('Miley', 'Cyrus', 'miley2@gmail.com', '555666777', '1992-11-23');
+('Miley', 'Cyrus', 'miley2@gmail.com', '555666777', '1992-11-23'),
+('Robert', 'Pattinson', 'batman@gmail.com', '123123123', '1986-05-13');
 
 
 INSERT INTO Wycieczki (Kod_wycieczki, Nazwa, Opis, Status_wycieczki, Id_destynacji) VALUES 
@@ -113,7 +117,8 @@ INSERT INTO Wycieczki (Kod_wycieczki, Nazwa, Opis, Status_wycieczki, Id_destynac
 ('MLE007HON', 'Malediwy Nurkowanie', 'Snorkeling na rafie koralowej przy hotelu', 'aktywna', 7),
 ('UKLON008ROY', 'Londyn Historyczny', 'Tower of London i spacer wzdłuż Tamizy', 'planowana', 8),
 ('EGSAR009FAM', 'Egipt Piramidy', 'Całodniowa wycieczka autokarem pod piramidy', 'aktywna', 9),
-('MON010YCH', 'Lazurowe Wybrzeże', 'Wycieczka pociągiem do Nicei i Cannes', 'aktywna', 10);
+('MON010YCH', 'Lazurowe Wybrzeże', 'Wycieczka pociągiem do Nicei i Cannes', 'aktywna', 10),
+('ESBAR011', 'Barcelona Sun', 'Wycieczka widmo bez terminow', 'planowana', 11);
 
 
 INSERT INTO Zakwaterowanie (Kod_wycieczki, Id_hotelu, Czas_trwania, Cena_za_osobe) VALUES 
@@ -159,7 +164,8 @@ INSERT INTO Terminy (Data_wyjazdu, Data_powrotu, Status_terminu, Liczba_dostepny
 ('2025-07-25', '2025-08-01', 'planowany', 30, 2, 'EGSAR009FAM', 9),
 ('2025-06-10', '2025-06-13', 'planowany', 40, 1, 'PLKRK001VIP', 1),
 ('2025-09-15', '2025-09-18', 'planowany', 25, 3, 'USANY005BUS', 5),
-('2025-08-16', '2025-08-23', 'planowany', 5, 10, 'MON010YCH', 10);
+('2025-08-16', '2025-08-23', 'planowany', 5, 10, 'MON010YCH', 10),
+('2025-09-01', '2025-09-04', 'planowany', 10, 2, 'PLKRK001', 1);
 
 
 INSERT INTO Klienci (Id_osoby, Login) VALUES 
@@ -208,7 +214,8 @@ INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
 ('potwierdzona', 3000.00, 2, 2),
 ('potwierdzona', 10000.00, 3, 3),
 ('potwierdzona', 2500.00, 9, 8),
-('potwierdzona', 2500.00, 9, 8);
+('potwierdzona', 2500.00, 9, 8),
+('potwierdzona', 15000.00, 21, 4);
 
 
 INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji) VALUES 
@@ -307,4 +314,7 @@ INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby) VALUES
 (27, 2),
 (28, 3),
 (29, 8),
-(30, 8);
+(30, 8),
+(31, 4),
+(31, 21),
+(31, 22);
