@@ -4,7 +4,7 @@ GO
 USE biuro_podrozy;
 GO
 
--- ==== S£OWNIKI I TABELE NIEZALE¯NE ===
+
 
 CREATE TABLE Destynacje (
     Id_destynacji INT IDENTITY(1,1) PRIMARY KEY,
@@ -93,7 +93,7 @@ CREATE TABLE Dane_Osobowe (
 );
 GO
 
--- ==== TABELE ZALE¯NE ===
+
 
 CREATE TABLE Wycieczki (
     Kod_wycieczki VARCHAR(20) PRIMARY KEY CHECK (
@@ -176,7 +176,7 @@ CREATE TABLE Platnosci (
 );
 GO
 
--- ==== TABELE £¥CZ¥CE ===
+
 
 CREATE TABLE Rezerwacje_Transporty (
     Id_rezerwacji INT NOT NULL REFERENCES Rezerwacje(Id_rezerwacji) ON DELETE CASCADE,
