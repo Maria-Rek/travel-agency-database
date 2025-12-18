@@ -24,7 +24,7 @@ INSERT INTO Hotele (Nazwa, Standard, Adres, Certyfikat_wspolpracy) VALUES
 ('Bellagio', 5, 'Las Vegas Blvd, Las Vegas', 'aktywny'),
 ('The Plaza', 5, '5th Avenue, New York', 'aktywny'),
 ('Burj Al Arab', 5, 'Jumeirah St, Dubaj', 'aktywny'), 
-('One&Only Reethi Rah', 5, 'North Atoll, Male', 'aktywny'),
+('One and Only Reethi Rah', 5, 'North Atoll, Male', 'aktywny'),
 ('The Savoy', 5, 'Strand, London', 'wygasł'),
 ('Four Seasons Resort', 5, 'Four Seasons Blvd, Sharm', 'aktywny'),
 ('Hotel de Paris', 5, 'Place du Casino, Monako', 'aktywny'),
@@ -94,7 +94,9 @@ INSERT INTO Dane_Osobowe (Imie, Nazwisko, Email, Nr_telefonu, Data_urodzenia) VA
 ('Stormi', 'Webster', NULL, NULL, '2018-02-01'),
 ('Blue', 'Ivy', NULL, NULL, '2012-01-07'),
 ('Miley', 'Cyrus', 'miley2@gmail.com', '555666777', '1992-11-23'),
-('Robert', 'Pattinson', 'batman@gmail.com', '123123123', '1986-05-13');
+('Robert', 'Pattinson', 'batman@gmail.com', '123123123', '1986-05-13'), 
+('Keanu', 'Reeves', 'neo@gmail.com', '111222333', '1964-09-02'), 
+('Zendaya', 'Coleman', 'zen@gmail.com', '999888777', '1996-09-01'); 
 
 
 INSERT INTO Wycieczki (Kod_wycieczki, Nazwa, Opis, Status_wycieczki, Id_destynacji) VALUES 
@@ -172,7 +174,8 @@ INSERT INTO Klienci (Id_osoby, Login) VALUES
 (1, 'iga_s'), (2, 'robert_m'), (3, 'nicki_m'), (4, 'kanye_w'), (5, 'kim_k'),
 (6, 'elon_m'), (7, 'taylor_s'), (8, 'robert_l'), (9, 'lana_dr'), (10, 'olivia_r'),
 (11, 'cr7_siu'), (12, 'doja_c'), (13, 'travis_s'), (14, 'beyonce'), (15, 'jay_z'),
-(16, 'billie_e'), (17, 'ariana_g'), (18, 'miley_c'), (19, 'sabrina_c'), (20, 'dua_l');
+(16, 'billie_e'), (17, 'ariana_g'), (18, 'miley_c'), (19, 'sabrina_c'), (20, 'dua_l'),
+(27, 'neo_matrix'); 
 
 
 INSERT INTO Uczestnicy (Id_osoby, Typ_dokumentu) VALUES 
@@ -181,7 +184,8 @@ INSERT INTO Uczestnicy (Id_osoby, Typ_dokumentu) VALUES
 (9, 'paszport'), (10, 'paszport'), (11, 'paszport'), (12, 'paszport'), (13, 'paszport'),
 (14, 'paszport'), (15, 'paszport'), (16, 'paszport'), (17, 'paszport'), (18, 'paszport'),
 (19, 'paszport'), (20, 'paszport'),
-(21, 'paszport'), (22, 'paszport'), (23, 'paszport'), (24, 'paszport'), (25, 'paszport');
+(21, 'paszport'), (22, 'paszport'), (23, 'paszport'), (24, 'paszport'), (25, 'paszport'),
+(28, 'paszport'); 
 
 
 INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby) VALUES 
@@ -205,11 +209,11 @@ INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
 ('oczekująca', 12000.00, 7, 18),
 ('potwierdzona', 8000.00, 4, 19),
 ('anulowana', 8000.00, 4, 20),
-('potwierdzona', 0.00, 14, 4),
-('potwierdzona', 0.00, 14, 4),
-('potwierdzona', 0.00, 14, 13),
-('potwierdzona', 0.00, 20, 14),
-('potwierdzona', 0.00, 13, 6),
+('potwierdzona', 1.00, 14, 4),
+('potwierdzona', 1.00, 14, 4),
+('potwierdzona', 1.00, 14, 13),
+('potwierdzona', 1.00, 20, 14),
+('potwierdzona', 1.00, 13, 6),
 ('potwierdzona', 1500.00, 1, 1),
 ('potwierdzona', 3000.00, 2, 2),
 ('potwierdzona', 10000.00, 3, 3),
@@ -239,11 +243,11 @@ INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana
 (12000.00, NULL, 'nieopłacona', '2025-04-01', NULL, 18),
 (8000.00, 'gotówka', 'opłacona', '2025-07-01', '2025-07-01', 19),
 (8000.00, NULL, 'nieopłacona', '2025-07-01', NULL, 20),
-(0.00, 'karta', 'opłacona', '2025-07-01', '2025-06-30', 21),
-(0.00, 'karta', 'opłacona', '2025-07-01', '2025-06-30', 22),
-(0.00, 'karta', 'opłacona', '2025-07-01', '2025-06-30', 23),
-(0.00, 'przelew', 'opłacona', '2025-08-01', '2025-08-01', 24),
-(0.00, 'karta', 'opłacona', '2025-09-01', '2025-09-01', 25),
+(1.00, 'karta', 'opłacona', '2025-07-01', '2025-06-30', 21),
+(1.00, 'karta', 'opłacona', '2025-07-01', '2025-06-30', 22),
+(1.00, 'karta', 'opłacona', '2025-07-01', '2025-06-30', 23),
+(1.00, 'przelew', 'opłacona', '2025-08-01', '2025-08-01', 24),
+(1.00, 'karta', 'opłacona', '2025-09-01', '2025-09-01', 25),
 (1500.00, 'karta', 'opłacona', '2025-05-01', '2025-05-01', 26),
 (3000.00, 'karta', 'opłacona', '2025-05-01', '2025-05-01', 27),
 (10000.00, 'karta', 'opłacona', '2025-05-01', '2025-05-01', 28),
