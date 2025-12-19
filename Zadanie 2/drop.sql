@@ -1,3 +1,6 @@
+USE biuro_podrozy;
+GO
+
 DROP TABLE IF EXISTS Rezerwacje_Transporty;
 DROP TABLE IF EXISTS Rezerwacje_Uczestnicy;
 DROP TABLE IF EXISTS Platnosci;
@@ -15,5 +18,3 @@ DROP TABLE IF EXISTS Transporty;
 DROP TABLE IF EXISTS Piloci;
 DROP TABLE IF EXISTS Hotele;
 DROP TABLE IF EXISTS Destynacje;
-
-PRINT 'Tabele usuniête';

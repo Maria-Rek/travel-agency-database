@@ -1,7 +1,6 @@
 USE biuro_podrozy;
 GO
 
-
 INSERT INTO Destynacje (Kraj, Region, Miasto) VALUES 
 ('Polska', 'Małopolska', 'Kraków'),
 ('Włochy', 'Lacjum', 'Rzym'),
@@ -16,7 +15,6 @@ INSERT INTO Destynacje (Kraj, Region, Miasto) VALUES
 ('Hiszpania', 'Katalonia', 'Barcelona'),
 ('Japonia', 'Tokio', 'Tokio');
 
-
 INSERT INTO Hotele (Nazwa, Standard, Adres, Certyfikat_wspolpracy) VALUES 
 ('Hotel Copernicus', 5, 'Kanonicza 16, Kraków', 'aktywny'),
 ('Hotel Hassler', 5, 'Piazza Trinita 6, Rzym', 'aktywny'),
@@ -30,7 +28,6 @@ INSERT INTO Hotele (Nazwa, Standard, Adres, Certyfikat_wspolpracy) VALUES
 ('Hotel de Paris', 5, 'Place du Casino, Monako', 'aktywny'),
 ('W Barcelona', 5, 'Placa de la Rosa, Barcelona', 'aktywny');
 
-
 INSERT INTO Piloci (Imie, Nazwisko, Email, Telefon, Data_zatrudnienia, Status_pilota) VALUES 
 ('Bartosz', 'Kurek', 'bartosz.kurek@wp.pl', '500100100', '2016-01-01', 'aktywny'),
 ('Wilfredo', 'Leon', 'w.leon@gmail.com', '500100101', '2019-03-15', 'aktywny'),
@@ -42,7 +39,6 @@ INSERT INTO Piloci (Imie, Nazwisko, Email, Telefon, Data_zatrudnienia, Status_pi
 ('Kamil', 'Semeniuk', 'semeniuk@gmail.com', '500100107', '2020-06-15', 'aktywny'),
 ('Łukasz', 'Kaczmarek', 'lukasz.k@wp.pl', '500100108', '2019-02-28', 'aktywny'),
 ('Grzegorz', 'Łomacz', 'g.lomacz@wp.pl', '500100109', '2016-04-10', 'aktywny');
-
 
 INSERT INTO Transporty (Numer_transportu, Typ_transportu, Przewoznik, Miejsce_poczatkowe, Miejsce_docelowe, Data_wyjazdu, Data_przyjazdu) VALUES 
 ('LOT001', 'samolot', 'LOT', 'Warszawa', 'Kraków', '2025-06-01 08:00', '2025-06-01 09:00'),
@@ -66,7 +62,6 @@ INSERT INTO Transporty (Numer_transportu, Typ_transportu, Przewoznik, Miejsce_po
 ('RYAN02', 'samolot', 'Ryanair', 'Rzym', 'Modlin', '2025-08-05 14:00', '2025-08-05 16:00'),
 ('LH1112', 'samolot', 'Lufthansa', 'Las Vegas', 'Warszawa', '2025-09-05 09:00', '2025-09-06 08:00'),
 ('BUS667', 'autokar', 'Sindbad', 'Paryż', 'Wrocław', '2025-07-25 18:00', '2025-07-26 10:00');
-
 
 INSERT INTO Dane_Osobowe (Imie, Nazwisko, Email, Nr_telefonu, Data_urodzenia) VALUES 
 ('Iga', 'Świątek', 'iga.1ga@wp.pl', '600100100', '2001-05-31'),
@@ -93,232 +88,477 @@ INSERT INTO Dane_Osobowe (Imie, Nazwisko, Email, Nr_telefonu, Data_urodzenia) VA
 ('Saint', 'West', NULL, NULL, '2015-12-05'),
 ('Stormi', 'Webster', NULL, NULL, '2018-02-01'),
 ('Blue', 'Ivy', NULL, NULL, '2012-01-07'),
-('Miley', 'Cyrus', 'miley2@gmail.com', '555666777', '1992-11-23'),
 ('Robert', 'Pattinson', 'batman@gmail.com', '123123123', '1986-05-13'), 
 ('Keanu', 'Reeves', 'neo@gmail.com', '111222333', '1964-09-02'), 
 ('Zendaya', 'Coleman', 'zen@gmail.com', '999888777', '1996-09-01'); 
 
-
 INSERT INTO Wycieczki (Kod_wycieczki, Nazwa, Opis, Status_wycieczki, Id_destynacji) VALUES 
-('PLKRK001', 'Kraków Standard', 'Zwiedzanie Wawelu, Rynku i Sukiennic z przewodnikiem', 'aktywna', 1),
-('ITROM002', 'Rzymskie Wakacje', 'Koloseum, Watykan i Forum Romanum autokarem', 'aktywna', 2),
-('FRPAR003', 'Paryż w Pigułce', 'Wjazd na Wieżę Eiffla, Luwr i rejs po Sekwanie', 'aktywna', 3),
-('USALV004', 'Las Vegas Trip', 'Spacer główną ulicą, pokaz fontann i czas wolny', 'aktywna', 4),
-('USANY005', 'Nowy Jork City', 'Statua Wolności, Times Square i spacer po parku', 'aktywna', 5), 
-('DXB006', 'Dubaj Express', 'Wjazd na Burj Khalifa, Dubai Mall i plażowanie', 'aktywna', 6),
-('MLE007', 'Malediwy Wypoczynek', 'Typowe plażowanie, hotel i basen przez tydzień', 'aktywna', 7),
-('UKLON008', 'Londyn Klasyczny', 'Big Ben, London Eye i zmiana warty pod pałacem', 'aktywna', 8),
-('EGSAR009', 'Egipt All Inclusive', 'Siedzenie nad basenem, bufet i wycieczka na quady', 'aktywna', 9),
-('MON010', 'Monako Spacer', 'Spacer pod kasyno, oceanarium i zdjęcia w porcie', 'aktywna', 10),
-('PLKRK001VIP', 'Kraków i Wieliczka', 'Zwiedzanie miasta plus kopalnia soli', 'aktywna', 1),
-('ITROM002REL', 'Rzym i Watykan', 'Całodzienne zwiedzanie bazyliki i muzeów', 'aktywna', 2),
-('FRPAR003ART', 'Paryż Muzealny', 'Luwr, dOrsay i dzielnica łacińska pieszo', 'aktywna', 3),
-('USALV004VIP', 'Vegas i Kanion', 'Wycieczka autokarowa nad Wielki Kanion', 'aktywna', 4),
-('USANY005BUS', 'NY Objazdówka', 'Zwiedzanie Manhattanu piętrowym autobusem', 'aktywna', 5),
-('DXB006GOLD', 'Dubaj i Pustynia', 'Safari samochodami terenowymi po wydmach', 'aktywna', 6),
-('MLE007HON', 'Malediwy Nurkowanie', 'Snorkeling na rafie koralowej przy hotelu', 'aktywna', 7),
-('UKLON008ROY', 'Londyn Historyczny', 'Tower of London i spacer wzdłuż Tamizy', 'planowana', 8),
-('EGSAR009FAM', 'Egipt Piramidy', 'Całodniowa wycieczka autokarem pod piramidy', 'aktywna', 9),
-('MON010YCH', 'Lazurowe Wybrzeże', 'Wycieczka pociągiem do Nicei i Cannes', 'aktywna', 10),
-('ESBAR011', 'Barcelona Sun', 'Wycieczka widmo bez terminow', 'planowana', 11);
-
+('PLKRK001', 'Kraków Standard', 'Zwiedzanie Wawelu, Rynku i Sukiennic z przewodnikiem', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='Polska' AND Region='Małopolska' AND Miasto='Kraków')),
+('ITROM002', 'Rzymskie Wakacje', 'Koloseum, Watykan i Forum Romanum autokarem', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='Włochy' AND Region='Lacjum' AND Miasto='Rzym')),
+('FRPAR003', 'Paryż w Pigułce', 'Wjazd na Wieżę Eiffla, Luwr i rejs po Sekwanie', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='Francja' AND Region IS NULL AND Miasto='Paryż')),
+('USALV004', 'Las Vegas Trip', 'Spacer główną ulicą, pokaz fontann i czas wolny', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='USA' AND Region='Nevada' AND Miasto='Las Vegas')),
+('USANY005', 'Nowy Jork City', 'Statua Wolności, Times Square i spacer po parku', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='USA' AND Region='New York' AND Miasto='New York')),
+('DXB006', 'Dubaj Express', 'Wjazd na Burj Khalifa, Dubai Mall i plażowanie', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='ZEA' AND Region IS NULL AND Miasto='Dubaj')),
+('MLE007', 'Malediwy Wypoczynek', 'Typowe plażowanie, hotel i basen przez tydzień', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='Malediwy' AND Region IS NULL AND Miasto='Male')),
+('UKLON008', 'Londyn Klasyczny', 'Big Ben, London Eye i zmiana warty pod pałacem', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='Wielka Brytania' AND Region='Anglia' AND Miasto='London')),
+('EGSAR009', 'Egipt All Inclusive', 'Siedzenie nad basenem, bufet i wycieczka na quady', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='Egipt' AND Region='Synaj' AND Miasto='Sharm El Sheikh')),
+('MON010', 'Monako Spacer', 'Spacer pod kasyno, oceanarium i zdjęcia w porcie', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='Monako' AND Region IS NULL AND Miasto='Monako')),
+('PLKRK001VIP', 'Kraków i Wieliczka', 'Zwiedzanie miasta plus kopalnia soli', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='Polska' AND Region='Małopolska' AND Miasto='Kraków')),
+('ITROM002REL', 'Rzym i Watykan', 'Całodzienne zwiedzanie bazyliki i muzeów', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='Włochy' AND Region='Lacjum' AND Miasto='Rzym')),
+('FRPAR003ART', 'Paryż Muzealny', 'Luwr, dOrsay i dzielnica łacińska pieszo', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='Francja' AND Region IS NULL AND Miasto='Paryż')),
+('USALV004VIP', 'Vegas i Kanion', 'Wycieczka autokarowa nad Wielki Kanion', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='USA' AND Region='Nevada' AND Miasto='Las Vegas')),
+('USANY005BUS', 'NY Objazdówka', 'Zwiedzanie Manhattanu piętrowym autobusem', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='USA' AND Region='New York' AND Miasto='New York')),
+('DXB006GOLD', 'Dubaj i Pustynia', 'Safari samochodami terenowymi po wydmach', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='ZEA' AND Region IS NULL AND Miasto='Dubaj')),
+('MLE007HON', 'Malediwy Nurkowanie', 'Snorkeling na rafie koralowej przy hotelu', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='Malediwy' AND Region IS NULL AND Miasto='Male')),
+('UKLON008ROY', 'Londyn Historyczny', 'Tower of London i spacer wzdłuż Tamizy', 'planowana',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='Wielka Brytania' AND Region='Anglia' AND Miasto='London')),
+('EGSAR009FAM', 'Egipt Piramidy', 'Całodniowa wycieczka autokarem pod piramidy', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='Egipt' AND Region='Synaj' AND Miasto='Sharm El Sheikh')),
+('MON010YCH', 'Lazurowe Wybrzeże', 'Wycieczka pociągiem do Nicei i Cannes', 'aktywna',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='Monako' AND Region IS NULL AND Miasto='Monako')),
+('ESBAR011', 'Barcelona Sun', 'Wycieczka widmo bez terminow', 'planowana',
+ (SELECT Id_destynacji FROM Destynacje WHERE Kraj='Hiszpania' AND Region='Katalonia' AND Miasto='Barcelona'));
 
 INSERT INTO Zakwaterowanie (Kod_wycieczki, Id_hotelu, Czas_trwania, Cena_za_osobe) VALUES 
-('PLKRK001', 1, 3, 1500.00),
-('ITROM002', 2, 5, 3000.00),
-('FRPAR003', 3, 4, 10000.00),
-('USALV004', 4, 7, 8000.00),
-('USANY005', 5, 5, 9500.00),
-('DXB006', 6, 7, 15000.00),
-('MLE007', 7, 10, 12000.00),
-('UKLON008', 8, 4, 4000.00),
-('EGSAR009', 9, 14, 2500.00),
-('MON010', 10, 3, 20000.00),
-('PLKRK001VIP', 1, 3, 3000.00),
-('ITROM002REL', 2, 7, 4000.00),
-('FRPAR003ART', 3, 5, 11000.00),
-('USALV004VIP', 4, 7, 25000.00),
-('USANY005BUS', 5, 3, 12000.00),
-('DXB006GOLD', 6, 14, 30000.00),
-('MLE007HON', 7, 14, 18000.00),
-('UKLON008ROY', 8, 5, 6000.00),
-('EGSAR009FAM', 9, 7, 3000.00),
-('MON010YCH', 10, 7, 50000.00);
-
+('PLKRK001', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Hotel Copernicus' AND Adres='Kanonicza 16, Kraków'), 3, 1500.00),
+('ITROM002', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Hotel Hassler' AND Adres='Piazza Trinita 6, Rzym'), 5, 3000.00),
+('FRPAR003', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Ritz Paris' AND Adres='Place Vendome 15, Paryż'), 4, 10000.00),
+('USALV004', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Bellagio' AND Adres='Las Vegas Blvd, Las Vegas'), 7, 8000.00),
+('USANY005', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='The Plaza' AND Adres='5th Avenue, New York'), 5, 9500.00),
+('DXB006', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Burj Al Arab' AND Adres='Jumeirah St, Dubaj'), 7, 15000.00),
+('MLE007', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='One and Only Reethi Rah' AND Adres='North Atoll, Male'), 10, 12000.00),
+('UKLON008', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='The Savoy' AND Adres='Strand, London'), 4, 4000.00),
+('EGSAR009', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Four Seasons Resort' AND Adres='Four Seasons Blvd, Sharm'), 14, 2500.00),
+('MON010', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Hotel de Paris' AND Adres='Place du Casino, Monako'), 3, 20000.00),
+('PLKRK001VIP', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Hotel Copernicus' AND Adres='Kanonicza 16, Kraków'), 3, 3000.00),
+('ITROM002REL', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Hotel Hassler' AND Adres='Piazza Trinita 6, Rzym'), 7, 4000.00),
+('FRPAR003ART', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Ritz Paris' AND Adres='Place Vendome 15, Paryż'), 5, 11000.00),
+('USALV004VIP', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Bellagio' AND Adres='Las Vegas Blvd, Las Vegas'), 7, 25000.00),
+('USANY005BUS', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='The Plaza' AND Adres='5th Avenue, New York'), 3, 12000.00),
+('DXB006GOLD', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Burj Al Arab' AND Adres='Jumeirah St, Dubaj'), 14, 30000.00),
+('MLE007HON', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='One and Only Reethi Rah' AND Adres='North Atoll, Male'), 14, 18000.00),
+('UKLON008ROY', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='The Savoy' AND Adres='Strand, London'), 5, 6000.00),
+('EGSAR009FAM', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Four Seasons Resort' AND Adres='Four Seasons Blvd, Sharm'), 7, 3000.00),
+('MON010YCH', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Hotel de Paris' AND Adres='Place du Casino, Monako'), 7, 50000.00);
 
 INSERT INTO Terminy (Data_wyjazdu, Data_powrotu, Status_terminu, Liczba_dostepnych_miejsc, Id_pilota, Kod_wycieczki, Id_hotelu) VALUES 
-('2025-06-01', '2025-06-04', 'planowany', 40, 1, 'PLKRK001', 1),
-('2025-07-15', '2025-07-20', 'planowany', 30, 2, 'ITROM002', 2),
-('2025-06-15', '2025-06-19', 'planowany', 20, 5, 'FRPAR003', 3),
-('2025-07-10', '2025-07-17', 'planowany', 100, 9, 'USALV004', 4),
-('2025-08-01', '2025-08-06', 'planowany', 25, 3, 'USANY005', 5),
-('2025-07-01', '2025-07-08', 'planowany', 10, 6, 'DXB006', 6),
-('2025-05-05', '2025-05-15', 'planowany', 15, 8, 'MLE007', 7),
-('2025-09-01', '2025-09-05', 'planowany', 35, 10, 'UKLON008', 8),
-('2025-08-05', '2025-08-19', 'planowany', 50, 2, 'EGSAR009', 9),
-('2025-08-16', '2025-08-19', 'planowany', 5, 10, 'MON010', 10),
-('2025-09-10', '2025-09-17', 'planowany', 20, 9, 'USALV004VIP', 4),
-('2025-06-20', '2025-06-27', 'planowany', 45, 1, 'ITROM002REL', 2),
-('2025-10-01', '2025-10-15', 'planowany', 35, 6, 'DXB006GOLD', 6),
-('2025-08-20', '2025-09-03', 'planowany', 50, 5, 'FRPAR003ART', 3),
-('2025-08-05', '2025-08-12', 'planowany', 48, 8, 'MLE007HON', 7),
-('2025-09-05', '2025-09-10', 'planowany', 30, 10, 'UKLON008ROY', 8),
-('2025-07-25', '2025-08-01', 'planowany', 30, 2, 'EGSAR009FAM', 9),
-('2025-06-10', '2025-06-13', 'planowany', 40, 1, 'PLKRK001VIP', 1),
-('2025-09-15', '2025-09-18', 'planowany', 25, 3, 'USANY005BUS', 5),
-('2025-08-16', '2025-08-23', 'planowany', 5, 10, 'MON010YCH', 10),
-('2025-09-01', '2025-09-04', 'planowany', 10, 2, 'PLKRK001', 1);
+('2025-06-01', '2025-06-04', 'planowany', 40,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100100'),
+ 'PLKRK001', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Hotel Copernicus' AND Adres='Kanonicza 16, Kraków')),
 
+('2025-07-15', '2025-07-20', 'planowany', 30,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100101'),
+ 'ITROM002', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Hotel Hassler' AND Adres='Piazza Trinita 6, Rzym')),
+
+('2025-06-15', '2025-06-19', 'planowany', 20,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100104'),
+ 'FRPAR003', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Ritz Paris' AND Adres='Place Vendome 15, Paryż')),
+
+('2025-07-10', '2025-07-17', 'planowany', 100,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100108'),
+ 'USALV004', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Bellagio' AND Adres='Las Vegas Blvd, Las Vegas')),
+
+('2025-08-01', '2025-08-06', 'planowany', 25,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100102'),
+ 'USANY005', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='The Plaza' AND Adres='5th Avenue, New York')),
+
+('2025-07-01', '2025-07-08', 'planowany', 10,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100105'),
+ 'DXB006', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Burj Al Arab' AND Adres='Jumeirah St, Dubaj')),
+
+('2025-05-05', '2025-05-15', 'planowany', 15,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100107'),
+ 'MLE007', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='One and Only Reethi Rah' AND Adres='North Atoll, Male')),
+
+('2025-09-01', '2025-09-05', 'planowany', 35,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100109'),
+ 'UKLON008', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='The Savoy' AND Adres='Strand, London')),
+
+('2025-08-05', '2025-08-19', 'planowany', 50,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100101'),
+ 'EGSAR009', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Four Seasons Resort' AND Adres='Four Seasons Blvd, Sharm')),
+
+('2025-08-16', '2025-08-19', 'planowany', 5,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100109'),
+ 'MON010', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Hotel de Paris' AND Adres='Place du Casino, Monako')),
+
+('2025-09-10', '2025-09-17', 'planowany', 20,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100108'),
+ 'USALV004VIP', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Bellagio' AND Adres='Las Vegas Blvd, Las Vegas')),
+
+('2025-06-20', '2025-06-27', 'planowany', 45,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100100'),
+ 'ITROM002REL', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Hotel Hassler' AND Adres='Piazza Trinita 6, Rzym')),
+
+('2025-10-01', '2025-10-15', 'planowany', 35,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100105'),
+ 'DXB006GOLD', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Burj Al Arab' AND Adres='Jumeirah St, Dubaj')),
+
+('2025-08-20', '2025-09-03', 'planowany', 50,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100104'),
+ 'FRPAR003ART', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Ritz Paris' AND Adres='Place Vendome 15, Paryż')),
+
+('2025-08-05', '2025-08-12', 'planowany', 48,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100107'),
+ 'MLE007HON', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='One and Only Reethi Rah' AND Adres='North Atoll, Male')),
+
+('2025-09-05', '2025-09-10', 'planowany', 30,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100109'),
+ 'UKLON008ROY', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='The Savoy' AND Adres='Strand, London')),
+
+('2025-07-25', '2025-08-01', 'planowany', 30,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100101'),
+ 'EGSAR009FAM', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Four Seasons Resort' AND Adres='Four Seasons Blvd, Sharm')),
+
+('2025-06-10', '2025-06-13', 'planowany', 40,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100100'),
+ 'PLKRK001VIP', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Hotel Copernicus' AND Adres='Kanonicza 16, Kraków')),
+
+('2025-09-15', '2025-09-18', 'planowany', 25,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100102'),
+ 'USANY005BUS', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='The Plaza' AND Adres='5th Avenue, New York')),
+
+('2025-08-16', '2025-08-23', 'planowany', 5,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100109'),
+ 'MON010YCH', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Hotel de Paris' AND Adres='Place du Casino, Monako')),
+
+('2025-09-01', '2025-09-04', 'planowany', 10,
+ (SELECT TOP 1 Id_pilota FROM Piloci WHERE Telefon='500100101'),
+ 'PLKRK001', (SELECT TOP 1 Id_hotelu FROM Hotele WHERE Nazwa='Hotel Copernicus' AND Adres='Kanonicza 16, Kraków'));
 
 INSERT INTO Klienci (Id_osoby, Login) VALUES 
-(1, 'iga_s'), (2, 'robert_m'), (3, 'nicki_m'), (4, 'kanye_w'), (5, 'kim_k'),
-(6, 'elon_m'), (7, 'taylor_s'), (8, 'robert_l'), (9, 'lana_dr'), (10, 'olivia_r'),
-(11, 'cr7_siu'), (12, 'doja_c'), (13, 'travis_s'), (14, 'beyonce'), (15, 'jay_z'),
-(16, 'billie_e'), (17, 'ariana_g'), (18, 'miley_c'), (19, 'sabrina_c'), (20, 'dua_l'),
-(27, 'neo_matrix'); 
-
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='iga.1ga@wp.pl'), 'iga_s'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='robert@wp.pl'), 'robert_m'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='nicki@gmail.com'), 'nicki_m'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='ye@gmail.com'), 'kanye_w'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='kim@gmail.com'), 'kim_k'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='elon@gmail.com'), 'elon_m'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='taylor@gmail.com'), 'taylor_s'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='rl9@wp.pl'), 'robert_l'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='lana@gmail.com'), 'lana_dr'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='liv@gmail.com'), 'olivia_r'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='cr7@gmail.com'), 'cr7_siu'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='doja@gmail.com'), 'doja_c'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='travis@gmail.com'), 'travis_s'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='queen@gmail.com'), 'beyonce'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='jayz@gmail.com'), 'jay_z'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='billie@gmail.com'), 'billie_e'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='ari@gmail.com'), 'ariana_g'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='miley@gmail.com'), 'miley_c'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='sabrina@gmail.com'), 'sabrina_c'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='dua@gmail.com'), 'dua_l'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='neo@gmail.com'), 'neo_matrix');
 
 INSERT INTO Uczestnicy (Id_osoby, Typ_dokumentu) VALUES 
-(1, 'dowód osobisty'), (2, 'dowód osobisty'), (3, 'paszport'), 
-(4, 'paszport'), (5, 'paszport'), (6, 'paszport'), (7, 'paszport'), (8, 'dowód osobisty'),
-(9, 'paszport'), (10, 'paszport'), (11, 'paszport'), (12, 'paszport'), (13, 'paszport'),
-(14, 'paszport'), (15, 'paszport'), (16, 'paszport'), (17, 'paszport'), (18, 'paszport'),
-(19, 'paszport'), (20, 'paszport'),
-(21, 'paszport'), (22, 'paszport'), (23, 'paszport'), (24, 'paszport'), (25, 'paszport'),
-(28, 'paszport'); 
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='iga.1ga@wp.pl'), 'dowód osobisty'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='robert@wp.pl'), 'dowód osobisty'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='nicki@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='ye@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='kim@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='elon@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='taylor@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='rl9@wp.pl'), 'dowód osobisty'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='lana@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='liv@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='cr7@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='doja@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='travis@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='queen@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='jayz@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='billie@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='ari@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='miley@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='sabrina@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='dua@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='neo@gmail.com'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Imie='North' AND Nazwisko='West' AND Data_urodzenia='2013-06-15'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Imie='Saint' AND Nazwisko='West' AND Data_urodzenia='2015-12-05'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Imie='Stormi' AND Nazwisko='Webster' AND Data_urodzenia='2018-02-01'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Imie='Blue' AND Nazwisko='Ivy' AND Data_urodzenia='2012-01-07'), 'paszport'),
+((SELECT Id_osoby FROM Dane_Osobowe WHERE Email='zen@gmail.com'), 'paszport');
 
+USE biuro_podrozy;
+GO
 
-INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby) VALUES 
-('zrealizowana', 1500.00, 1, 1),
-('potwierdzona', 3000.00, 2, 2),
-('potwierdzona', 10000.00, 3, 3),
-('potwierdzona', 50000.00, 14, 4),
-('zrealizowana', 50000.00, 14, 5),
-('potwierdzona', 30000.00, 13, 6),
-('potwierdzona', 12000.00, 7, 7),
-('potwierdzona', 4000.00, 12, 8),
-('anulowana', 9500.00, 5, 9),
-('potwierdzona', 20000.00, 10, 10),
-('oczekująca', 20000.00, 10, 11),
-('potwierdzona', 4000.00, 8, 12),
-('potwierdzona', 25000.00, 14, 13),
-('potwierdzona', 50000.00, 20, 14),
-('potwierdzona', 50000.00, 20, 15),
-('zrealizowana', 15000.00, 6, 16),
-('potwierdzona', 15000.00, 6, 17),
-('oczekująca', 12000.00, 7, 18),
-('potwierdzona', 8000.00, 4, 19),
-('anulowana', 8000.00, 4, 20),
-('potwierdzona', 1.00, 14, 4),
-('potwierdzona', 1.00, 14, 4),
-('potwierdzona', 1.00, 14, 13),
-('potwierdzona', 1.00, 20, 14),
-('potwierdzona', 1.00, 13, 6),
-('potwierdzona', 1500.00, 1, 1),
-('potwierdzona', 3000.00, 2, 2),
-('potwierdzona', 10000.00, 3, 3),
-('potwierdzona', 2500.00, 9, 8),
-('potwierdzona', 2500.00, 9, 8),
-('potwierdzona', 15000.00, 21, 4);
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'zrealizowana', 1500.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='PLKRK001' AND Data_wyjazdu='2025-06-01'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='iga.1ga@wp.pl')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (1500.00, 'gotówka', 'opłacona', '2025-05-01', '2025-04-28', IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Transporty (Id_rezerwacji, Numer_transportu)
+VALUES (IDENT_CURRENT('Rezerwacje'), 'LOT001'),
+       (IDENT_CURRENT('Rezerwacje'), 'LOT002');
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES (IDENT_CURRENT('Rezerwacje'),
+        (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='iga.1ga@wp.pl')));
 
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'potwierdzona', 3000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='ITROM002' AND Data_wyjazdu='2025-07-15'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='robert@wp.pl')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (3000.00, 'przelew', 'opłacona', '2025-04-20', '2025-04-20', IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Transporty (Id_rezerwacji, Numer_transportu)
+VALUES (IDENT_CURRENT('Rezerwacje'), 'RYAN01'),
+       (IDENT_CURRENT('Rezerwacje'), 'RYAN02');
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES (IDENT_CURRENT('Rezerwacje'),
+        (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='robert@wp.pl')));
 
-INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji) VALUES 
-(1500.00, 'gotówka', 'opłacona', '2025-05-01', '2025-04-28', 1),
-(3000.00, 'przelew', 'opłacona', '2025-04-20', '2025-04-20', 2),
-(10000.00, 'karta', 'opłacona', '2025-06-01', '2025-06-01', 3),
-(50000.00, 'karta', 'opłacona', '2025-07-01', '2025-06-30', 4),
-(50000.00, 'karta', 'opłacona', '2025-07-01', '2025-06-30', 5),
-(30000.00, 'karta', 'opłacona', '2025-09-01', '2025-09-01', 6),
-(12000.00, 'przelew', 'opłacona', '2025-04-01', '2025-04-01', 7),
-(4000.00, 'przelew', 'opłacona', '2025-06-10', '2025-06-10', 8),
-(9500.00, NULL, 'nieopłacona', '2025-07-01', NULL, 9),
-(20000.00, 'gotówka', 'opłacona', '2025-08-01', '2025-08-01', 10),
-(20000.00, NULL, 'nieopłacona', '2025-08-01', NULL, 11),
-(4000.00, 'karta', 'opłacona', '2025-08-20', '2025-08-20', 12),
-(25000.00, 'karta', 'opłacona', '2025-07-01', '2025-06-30', 13),
-(50000.00, 'przelew', 'opłacona', '2025-08-01', '2025-08-01', 14),
-(50000.00, 'przelew', 'opłacona', '2025-08-01', '2025-08-01', 15),
-(15000.00, 'karta', 'opłacona', '2025-06-15', '2025-06-15', 16),
-(15000.00, 'karta', 'opłacona', '2025-06-15', '2025-06-15', 17),
-(12000.00, NULL, 'nieopłacona', '2025-04-01', NULL, 18),
-(8000.00, 'gotówka', 'opłacona', '2025-07-01', '2025-07-01', 19),
-(8000.00, NULL, 'nieopłacona', '2025-07-01', NULL, 20),
-(1.00, 'karta', 'opłacona', '2025-07-01', '2025-06-30', 21),
-(1.00, 'karta', 'opłacona', '2025-07-01', '2025-06-30', 22),
-(1.00, 'karta', 'opłacona', '2025-07-01', '2025-06-30', 23),
-(1.00, 'przelew', 'opłacona', '2025-08-01', '2025-08-01', 24),
-(1.00, 'karta', 'opłacona', '2025-09-01', '2025-09-01', 25),
-(1500.00, 'karta', 'opłacona', '2025-05-01', '2025-05-01', 26),
-(3000.00, 'karta', 'opłacona', '2025-05-01', '2025-05-01', 27),
-(10000.00, 'karta', 'opłacona', '2025-05-01', '2025-05-01', 28),
-(2500.00, 'gotówka', 'opłacona', '2025-08-01', '2025-08-01', 29),
-(2500.00, 'gotówka', 'opłacona', '2025-08-01', '2025-08-01', 30);
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'potwierdzona', 10000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='FRPAR003' AND Data_wyjazdu='2025-06-15'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='nicki@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (10000.00, 'karta', 'opłacona', '2025-06-01', '2025-06-01', IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Transporty (Id_rezerwacji, Numer_transportu)
+VALUES (IDENT_CURRENT('Rezerwacje'), 'AF1234'),
+       (IDENT_CURRENT('Rezerwacje'), 'AF1235');
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES (IDENT_CURRENT('Rezerwacje'),
+        (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='nicki@gmail.com')));
 
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'oczekująca', 25000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='USALV004VIP' AND Data_wyjazdu='2025-09-10'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='ye@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (25000.00, NULL, 'nieopłacona', '2025-08-20', NULL, IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Transporty (Id_rezerwacji, Numer_transportu)
+VALUES (IDENT_CURRENT('Rezerwacje'), 'LH1111'),
+       (IDENT_CURRENT('Rezerwacje'), 'LH1112');
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES
+(IDENT_CURRENT('Rezerwacje'), (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='ye@gmail.com'))),
+(IDENT_CURRENT('Rezerwacje'), (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Imie='North' AND Nazwisko='West' AND Data_urodzenia='2013-06-15'))),
+(IDENT_CURRENT('Rezerwacje'), (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Imie='Saint' AND Nazwisko='West' AND Data_urodzenia='2015-12-05')));
 
-INSERT INTO Rezerwacje_Transporty (Id_rezerwacji, Numer_transportu) VALUES 
-(1, 'LOT001'), (1, 'LOT002'), 
-(2, 'RYAN01'), (2, 'RYAN02'),
-(3, 'AF1234'), (3, 'AF1235'), 
-(4, 'LH1111'), (4, 'LH1112'),
-(5, 'LH1111'), (5, 'LH1112'),
-(6, 'EK1010'), (6, 'EK1011'),
-(7, 'QATAR1'), 
-(8, 'RYAN01'), 
-(9, 'DL9999'), 
-(10, 'PRIVMJ'),
-(11, 'PRIVMJ'), 
-(12, 'WIZZ01'), 
-(13, 'LH1111'), 
-(14, 'PRIVMJ'),
-(15, 'PRIVMJ'), 
-(16, 'EK1010'), 
-(17, 'EK1010'), 
-(18, 'QATAR1'), 
-(19, 'LH1111'), 
-(20, 'LH1111'), 
-(21, 'LH1111'), 
-(22, 'LH1111'), 
-(23, 'LH1111'), 
-(24, 'PRIVMJ'), 
-(25, 'EK1010'), 
-(26, 'LOT001'), 
-(27, 'RYAN01'), 
-(28, 'AF1234'), 
-(29, 'EGYPT1'), 
-(30, 'EGYPT1');
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'zrealizowana', 11000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='FRPAR003ART' AND Data_wyjazdu='2025-08-20'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='kim@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (11000.00, 'karta', 'opłacona', '2025-07-01', '2025-06-30', IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Transporty (Id_rezerwacji, Numer_transportu)
+VALUES (IDENT_CURRENT('Rezerwacje'), 'BUS666');
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES (IDENT_CURRENT('Rezerwacje'),
+        (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='kim@gmail.com')));
 
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'potwierdzona', 30000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='DXB006GOLD' AND Data_wyjazdu='2025-10-01'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='elon@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (30000.00, 'karta', 'opłacona', '2025-09-01', '2025-09-01', IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Transporty (Id_rezerwacji, Numer_transportu)
+VALUES (IDENT_CURRENT('Rezerwacje'), 'EK1010'),
+       (IDENT_CURRENT('Rezerwacje'), 'EK1011');
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES (IDENT_CURRENT('Rezerwacje'),
+        (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='elon@gmail.com')));
 
-INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby) VALUES 
-(1, 1),
-(2, 2),
-(3, 3),
-(4, 4), 
-(5, 5), 
-(6, 6), 
-(7, 7),
-(8, 8),
-(9, 9),
-(10, 10),
-(11, 11),
-(12, 12),
-(13, 13), 
-(14, 14), 
-(15, 15), 
-(16, 16),
-(17, 17),
-(18, 18),
-(19, 19),
-(20, 20),
-(21, 21),
-(22, 22),
-(23, 23),
-(24, 24),
-(25, 25),
-(26, 1),
-(27, 2),
-(28, 3),
-(29, 8),
-(30, 8),
-(31, 4),
-(31, 21),
-(31, 22);
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'potwierdzona', 12000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='MLE007' AND Data_wyjazdu='2025-05-05'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='taylor@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (12000.00, 'przelew', 'opłacona', '2025-04-01', '2025-04-01', IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Transporty (Id_rezerwacji, Numer_transportu)
+VALUES (IDENT_CURRENT('Rezerwacje'), 'QATAR1');
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES (IDENT_CURRENT('Rezerwacje'),
+        (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='taylor@gmail.com')));
+
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'potwierdzona', 4000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='ITROM002REL' AND Data_wyjazdu='2025-06-20'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='rl9@wp.pl')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (4000.00, 'przelew', 'opłacona', '2025-06-10', '2025-06-10', IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Transporty (Id_rezerwacji, Numer_transportu)
+VALUES (IDENT_CURRENT('Rezerwacje'), 'RYAN01');
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES (IDENT_CURRENT('Rezerwacje'),
+        (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='rl9@wp.pl')));
+
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'anulowana', 9500.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='USANY005' AND Data_wyjazdu='2025-08-01'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='lana@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (9500.00, NULL, 'nieopłacona', '2025-07-01', NULL, IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Transporty (Id_rezerwacji, Numer_transportu)
+VALUES (IDENT_CURRENT('Rezerwacje'), 'DL9999'),
+       (IDENT_CURRENT('Rezerwacje'), 'DL9998');
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES (IDENT_CURRENT('Rezerwacje'),
+        (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='lana@gmail.com')));
+
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'potwierdzona', 20000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='MON010' AND Data_wyjazdu='2025-08-16'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='liv@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (20000.00, 'gotówka', 'opłacona', '2025-08-01', '2025-08-01', IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Transporty (Id_rezerwacji, Numer_transportu)
+VALUES (IDENT_CURRENT('Rezerwacje'), 'PRIVMJ');
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES (IDENT_CURRENT('Rezerwacje'),
+        (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='liv@gmail.com')));
+
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'oczekująca', 20000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='MON010' AND Data_wyjazdu='2025-08-16'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='cr7@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (20000.00, NULL, 'nieopłacona', '2025-08-01', NULL, IDENT_CURRENT('Rezerwacje'));
+
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'potwierdzona', 4000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='UKLON008' AND Data_wyjazdu='2025-09-01'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='doja@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (4000.00, 'karta', 'opłacona', '2025-08-20', '2025-08-20', IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Transporty (Id_rezerwacji, Numer_transportu)
+VALUES (IDENT_CURRENT('Rezerwacje'), 'WIZZ01');
+
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'zrealizowana', 3000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='EGSAR009FAM' AND Data_wyjazdu='2025-07-25'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='travis@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (3000.00, 'gotówka', 'opłacona', '2025-07-05', '2025-07-05', IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Transporty (Id_rezerwacji, Numer_transportu)
+VALUES (IDENT_CURRENT('Rezerwacje'), 'EGYPT1');
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES
+(IDENT_CURRENT('Rezerwacje'), (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='travis@gmail.com'))),
+(IDENT_CURRENT('Rezerwacje'), (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Imie='Stormi' AND Nazwisko='Webster' AND Data_urodzenia='2018-02-01')));
+
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'potwierdzona', 50001.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='MON010YCH' AND Data_wyjazdu='2025-08-16'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='queen@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (50001.00, 'przelew', 'opłacona', '2025-08-01', '2025-08-01', IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Transporty (Id_rezerwacji, Numer_transportu)
+VALUES (IDENT_CURRENT('Rezerwacje'), 'PRIVMJ');
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES
+(IDENT_CURRENT('Rezerwacje'), (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='queen@gmail.com'))),
+(IDENT_CURRENT('Rezerwacje'), (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Imie='Blue' AND Nazwisko='Ivy' AND Data_urodzenia='2012-01-07')));
+
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'potwierdzona', 50000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='MON010YCH' AND Data_wyjazdu='2025-08-16'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='jayz@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (50000.00, 'przelew', 'opłacona', '2025-08-01', '2025-08-01', IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Transporty (Id_rezerwacji, Numer_transportu)
+VALUES (IDENT_CURRENT('Rezerwacje'), 'PRIVMJ');
+
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'zrealizowana', 15000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='DXB006' AND Data_wyjazdu='2025-07-01'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='billie@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (15000.00, 'karta', 'opłacona', '2025-06-15', '2025-06-15', IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES (IDENT_CURRENT('Rezerwacje'),
+        (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='billie@gmail.com')));
+
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'potwierdzona', 15000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='DXB006' AND Data_wyjazdu='2025-07-01'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='ari@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (15000.00, 'karta', 'opłacona', '2025-06-15', '2025-06-15', IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES (IDENT_CURRENT('Rezerwacje'),
+        (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='ari@gmail.com')));
+
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'oczekująca', 18000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='MLE007HON' AND Data_wyjazdu='2025-08-05'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='miley@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (18000.00, NULL, 'nieopłacona', '2025-07-10', NULL, IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES (IDENT_CURRENT('Rezerwacje'),
+        (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='miley@gmail.com')));
+
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'zrealizowana', 8000.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='USALV004' AND Data_wyjazdu='2025-07-10'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='sabrina@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (8000.00, 'gotówka', 'opłacona', '2025-07-01', '2025-07-01', IDENT_CURRENT('Rezerwacje'));
+INSERT INTO Rezerwacje_Uczestnicy (Id_rezerwacji, Id_osoby)
+VALUES (IDENT_CURRENT('Rezerwacje'),
+        (SELECT Id_osoby FROM Uczestnicy WHERE Id_osoby=(SELECT Id_osoby FROM Dane_Osobowe WHERE Email='sabrina@gmail.com')));
+
+INSERT INTO Rezerwacje (Status_rezerwacji, Cena_calkowita, Id_terminu, Id_osoby)
+VALUES (
+ 'anulowana', 1500.00,
+ (SELECT TOP 1 Id_terminu FROM Terminy WHERE Kod_wycieczki='PLKRK001' AND Data_wyjazdu='2025-09-01'),
+ (SELECT Id_osoby FROM Dane_Osobowe WHERE Email='dua@gmail.com')
+);
+INSERT INTO Platnosci (Kwota, Metoda_platnosci, Status_platnosci, Data_planowana, Data_wplaty, Id_rezerwacji)
+VALUES (1500.00, NULL, 'nieopłacona', '2025-08-20', NULL, IDENT_CURRENT('Rezerwacje'));

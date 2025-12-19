@@ -27,7 +27,9 @@ CREATE TABLE Hotele (
     ),
     Standard INT NOT NULL CHECK (Standard BETWEEN 1 AND 5),
     Adres NVARCHAR(150) NOT NULL CHECK (Adres COLLATE Latin1_General_BIN2 NOT LIKE '%[^a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ0-9 .,/-]%'),
-    Certyfikat_wspolpracy NVARCHAR(20) DEFAULT 'aktywny' CHECK (Certyfikat_wspolpracy IN ('aktywny', 'wygasł'))
+    Certyfikat_wspolpracy NVARCHAR(20) NOT NULL DEFAULT 'aktywny' CHECK (Certyfikat_wspolpracy IN ('aktywny', 'wygasł')),
+
+    CONSTRAINT UQ_Hotele UNIQUE (Nazwa, Adres)
 );
 GO
 
@@ -42,7 +44,7 @@ CREATE TABLE Piloci (
         AND Nazwisko COLLATE Latin1_General_BIN2 NOT LIKE '%[^a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ -]%'
     ),
     Email VARCHAR(100) CHECK (Email LIKE '%_@__%.__%'),
-    Telefon VARCHAR(20) NOT NULL CHECK (
+    Telefon VARCHAR(20) UNIQUE NOT NULL CHECK (
         Telefon NOT LIKE '%[^0-9+]%' 
         AND Telefon NOT LIKE '_%+%'
     ),
@@ -89,7 +91,9 @@ CREATE TABLE Dane_Osobowe (
         Nr_telefonu NOT LIKE '%[^0-9+]%' 
         AND Nr_telefonu NOT LIKE '_%+%'
     ),
-    Data_urodzenia DATE NOT NULL CHECK (Data_urodzenia <= GETDATE())
+    Data_urodzenia DATE NOT NULL CHECK (Data_urodzenia <= GETDATE()),
+
+    CONSTRAINT UQ_Dane UNIQUE (Imie, Nazwisko, Data_urodzenia)
 );
 GO
 
