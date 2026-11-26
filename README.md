@@ -85,7 +85,6 @@ The schema follows relational normalization principles and avoids partial and tr
 | `zapytania.sql` | Analytical queries |
 | `drop.sql` | Schema cleanup |
 | `analiza.md` | Business analysis |
-| `report.pdf` | Project documentation |
 | `ERD/diagram_erd.png` | ERD diagram |
 
 ---
