@@ -78,13 +78,14 @@ The schema follows relational normalization principles and avoids partial and tr
 
 | File | Description |
 |------|------------|
-| `create.sql` | Schema definition (DDL) |
-| `insert.sql` | Sample data (DML) |
-| `update_cascade.sql` | Cascade update examples |
-| `delete_cascade.sql` | Cascade delete examples |
-| `zapytania.sql` | Analytical queries |
-| `drop.sql` | Schema cleanup |
-| `analiza.md` | Business analysis |
+| `SQL/create.sql` | Schema definition (DDL) |
+| `SQL/insert.sql` | Sample data (DML) |
+| `SQL/update_cascade.sql` | Cascade update examples |
+| `SQL/delete_cascade.sql` | Cascade delete examples |
+| `SQL/zapytania.sql` | Analytical queries |
+| `SQL/drop.sql` | Schema cleanup |
+| `ERD/analiza.md` | Business analysis |
+| `ERD/baza.erdc` | ERD model source file |
 | `ERD/diagram_erd.png` | ERD diagram |
 
 ---
